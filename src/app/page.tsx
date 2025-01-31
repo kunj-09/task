@@ -151,7 +151,7 @@ export default function Home() {
 
             {/* Cloud Placeholder */}
             <Image src="Cloud2.png" alt="" className="absolute -top-20 -right-20 w-64 h-64 bg-white/10 rounded-full blur-xl opacity-50" />
-            <Image src="Cloud1.png" alt=""></Image>
+            <Image src="Cloud1.png" alt=""/>
 
 {/* Bulb Image */}
 <div className="absolute top-[-100] left-[-10] w-40 md:w-40">
@@ -782,7 +782,7 @@ export default function Home() {
               }`}
             >
               <blockquote className="text-lg italic relative">
-              <Image src="span.icon.svg" alt="" className="p-3"></Image>
+              <Image src="span.icon.svg" alt="" className="p-3"/>
                 <span className="text-purple-400 text-3xl">&ldquo;</span>
                 {testimonial.quote}
               </blockquote>
