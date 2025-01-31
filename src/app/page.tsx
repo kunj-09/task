@@ -88,17 +88,21 @@ export default function Home() {
   };
   
   return (
+    <>
+    <Navbar/>
+
     <section className="min-h-screen relative overflow-hidden">
-     <Navbar/>
      
       {/* Hero Section */}
       <div className="container mx-auto px-8 pt-32 pb-24 relative">
         {/* Wave Background */}
         <div className="absolute bottom-0 left-0 w-full -z-10">
-          <Image 
+          <img 
             src="/Vector.png" 
             alt="Wave Background" 
             className="w-full h-auto"
+            // height="20"
+            // width="20"
             style={{ transform: 'translateY(40%)' }}
           />
         </div>
@@ -141,21 +145,22 @@ export default function Home() {
           <div className="relative z-10">
             {/* Main Image */}
             <div className="relative w-full aspect-square">
-              <Image 
+              <img 
                 src="/Forground.png"
                 alt="Main Visual"
-                
+                // height="20"
+                // width="20"
               />
 
             </div>
 
             {/* Cloud Placeholder */}
-            <Image src="Cloud2.png" alt="" className="absolute -top-20 -right-20 w-64 h-64 bg-white/10 rounded-full blur-xl opacity-50" />
-            <Image src="Cloud1.png" alt=""/>
+            <img src="/Cloud2.png" alt=""  className="absolute -top-20 -right-20 h-64 w-64 bg-white/10 rounded-full blur-xl opacity-50" />
+            <img src="/Cloud1.png"  alt=""/>
 
 {/* Bulb Image */}
 <div className="absolute top-[-100] left-[-10] w-40 md:w-40">
-  <Image src="Bulb.png" alt="Bulb Icon" />
+  <img src="/Bulb.png"  alt="Bulb Icon" />
   </div> 
 
           </div>
@@ -175,7 +180,7 @@ export default function Home() {
     {/* Left Side - Heading */}
     <div className="flex flex-col lg:flex-row justify-center items-center text-center lg:text-left"> 
       {/* Left Side - Heading */}
-      <Image className="h-3 w-13 absolute left-20 top-[-20] max-lg:left-10 max-lg:top-[-10]" src="Pseudo.png" alt="" />
+      <img className="h-3 w-13 absolute left-20 top-[-20] max-lg:left-10 max-lg:top-[-10]" src="/Pseudo.png" alt="" />
       <div className="max-w-xl px-4 lg:px-0">
         <h1 className="text-4xl font-bold relative mb-2 max-lg:text-2xl"> 
           Sepnoty: <span className="text-green-400">Building</span> Meaningful Connections 
@@ -197,7 +202,7 @@ export default function Home() {
   <div className="mt-6 flex justify-center items-center gap-4 w-full overflow-hidden">
       {/* Left Arrow */}
       <button onClick={handlePrev} className="p-2 rounded-full bg-gray-700 hover:bg-gray-600">
-        <Image src="Left.png" alt="" />
+        <img src="/Left.png" alt="" />
       </button>
 
       {/* Icons List - Swiper */}
@@ -209,7 +214,7 @@ export default function Home() {
         >
           {icons.concat(icons).map((icon, index) => ( // Duplicate for looping effect
             <div key={index} className="p-3 rounded-lg">
-              <Image src={icon} alt="" className="w-12 h-12" />
+              <img src={icon} alt="" className="w-12 h-12" />
             </div>
           ))}
         </motion.div>
@@ -217,7 +222,7 @@ export default function Home() {
 
       {/* Right Arrow */}
       <button onClick={handleNext} className="p-2 rounded-full bg-gray-700 hover:bg-gray-600">
-        <Image src="Right.png" alt="" />
+        <img src="/Right.png" alt="" />
       </button>
     </div>
 </div>
@@ -231,8 +236,8 @@ export default function Home() {
       <div className="container mx-auto flex flex-col lg:flex-row items-center lg:items-start">
         {/* Left Side Image */}
         <div className="lg:w-1/2 flex justify-center">
-          <Image 
-            src="Human.png" // REPLACE WITH ACTUAL IMAGE
+          <img 
+            src="/Human.png" // REPLACE WITH ACTUAL IMAGE
             alt="Illustration of a person working on a laptop"
             width={500} 
             height={500} 
@@ -242,7 +247,7 @@ export default function Home() {
 
         {/* Right Side Content */}
         <div className="lg:w-1/2 text-center lg:text-left mt-10 lg:mt-0 relative w-full">
-  <Image className="h-3 w-13 absolute left-20 top-[-20]" src="Pseudo.png" alt="" />
+  <img className="h-3 w-13 absolute left-20 top-[-20]" src="/Pseudo.png" alt="" />
 
   {/* Background Text */}
   <span className="absolute text-[7rem] font-bold text-transparent  [-webkit-text-stroke:1px_rgba(255,255,255,0.3)] top-[-100px] select-none">
@@ -255,8 +260,8 @@ export default function Home() {
           {/* Features List */}
           <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="flex items-center space-x-4">
-              <Image 
-                src="Empathy.svg" // REPLACE WITH ACTUAL IMAGE
+              <img 
+                src="/Empathy.svg" // REPLACE WITH ACTUAL IMAGE
                 alt="Empathetic AI Icon"
                 width={40} 
                 height={40} 
@@ -268,8 +273,8 @@ export default function Home() {
             </div>
             
             <div className="flex items-center space-x-4">
-              <Image  
-                src="Web.svg" // REPLACE WITH ACTUAL IMAGE
+              <img  
+                src="/Web.svg" // REPLACE WITH ACTUAL IMAGE
                 alt="Web & App Development Icon"
                 width={40} 
                 height={40} 
@@ -281,8 +286,8 @@ export default function Home() {
             </div>
 
             <div className="flex items-center space-x-4">
-              <Image
-                src="Digital.svg" // REPLACE WITH ACTUAL IMAGE
+              <img
+                src="/Digital.svg" // REPLACE WITH ACTUAL IMAGE
                 alt="Digital Marketing Icon"
                 width={40} 
                 height={40} 
@@ -294,8 +299,8 @@ export default function Home() {
             </div>
 
             <div className="flex items-center space-x-4">
-              <Image  
-                src="UIUX.svg" // REPLACE WITH ACTUAL IMAGE
+              <img  
+                src="/UIUX.svg" // REPLACE WITH ACTUAL IMAGE
                 alt="UI/UX Design Icon"
                 width={40} 
                 height={40} 
@@ -321,7 +326,7 @@ export default function Home() {
         <div className="absolute text-[6rem] font-bold text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.3)] top-20 select-none">
     WHO WE ARE? 
 </div>
-<Image className="h-3 w-13 absolute  top-40" src="Pseudo.png" alt="" />
+<img className="h-3 w-13 absolute  top-40" src="/Pseudo.png" alt="" />
         <div className="md:w-1/2 text-center md:text-left ">
          
           <h2 className="text-5xl font-bold uppercase relative text-gray-800">
@@ -341,7 +346,7 @@ export default function Home() {
                   key={index}
                   className="flex items-center gap-2 bg-gray-900 text-white py-2 px-4 rounded-lg shadow-md"
                 >
-                  <Image 
+                  <img 
                     src="/Check.svg" // REPLACE WITH ACTUAL IMAGE
                     alt="Check"
                     width={20}
@@ -356,8 +361,8 @@ export default function Home() {
 
         {/* Right Image */}
         <div className="md:w-1/2 flex justify-center mt-10 md:mt-0">
-          <Image 
-            src="About.png" // REPLACE WITH ACTUAL IMAGE
+          <img 
+            src="/About.png" // REPLACE WITH ACTUAL IMAGE
             alt="Who We Are Illustration"
             width={450}
             height={450}
@@ -380,7 +385,7 @@ export default function Home() {
   </div>
   <div className="flex justify-center "> {/* Added gap-x-8 */}
   {/* Left Side - Heading */}
-  <Image className="h-3 w-13 absolute top-[-10] " src="Pseudo.png" alt="" />
+  <img className="h-3 w-13 absolute top-[-10] " src="/Pseudo.png" alt="" />
   </div> 
   </div>   
   {/* Heading */}
@@ -394,7 +399,7 @@ export default function Home() {
     <div className="flex flex-col gap-8">
       {services.slice(2, 4).map((service, index) => (
         <div key={index} className="flex items-center gap-4 bg-gray-800 rounded-lg px-6 py-4 w-80 shadow-md relative">
-          <Image src={service.img} alt={service.title} width={50} height={50} />
+          <img src={service.img} alt={service.title} width={50} height={50} />
           <div className="text-left">
             <h3 className="text-lg font-semibold">{service.title}</h3>
             <p className="text-sm text-gray-400">{service.desc}</p>
@@ -408,7 +413,7 @@ export default function Home() {
     <div className="flex flex-col gap-8">
       {/* Moved Bottom Service to Top */}
       <div className="flex items-center gap-4 bg-gray-800 rounded-lg px-6 py-4 w-80 shadow-md relative">
-        <Image src={services[4].img} alt={services[4].title} width={50} height={50} />
+        <img src={services[4].img} alt={services[4].title} width={50} height={50} />
         <div className="text-left">
           <h3 className="text-lg font-semibold">{services[4].title}</h3>
           <p className="text-sm text-gray-400">{services[4].desc}</p>
@@ -418,7 +423,7 @@ export default function Home() {
       
       {/* Center Image */}
       <div className="relative w-72 h-72">
-        <Image src="Service.png" alt="Graph Illustration" />
+        <img src="/Service.png" alt="Graph Illustration" />
       </div>
     </div>
     
@@ -426,7 +431,7 @@ export default function Home() {
     <div className="flex flex-col gap-8">
       {services.slice(0, 2).map((service, index) => (
         <div key={index} className="flex items-center gap-4 bg-gray-800 rounded-lg px-6 py-4 w-80 shadow-md relative">
-          <Image src={service.img} alt={service.title} width={50} height={50} />
+          <img src={service.img} alt={service.title} width={50} height={50} />
           <div className="text-left">
             <h3 className="text-lg font-semibold">{service.title}</h3>
             <p className="text-sm text-gray-400">{service.desc}</p>
@@ -453,20 +458,20 @@ export default function Home() {
 </div>
       {/* Main Content */}
       <div className="relative z-10 max-w-4xl mx-auto text-center">
-  <Image className="h-3 w-13 absolute left-20 top-[-20]" src="Pseudo.png" alt="" />
+  <img className="h-3 w-13 absolute left-20 top-[-20]" src="/Pseudo.png" alt="" />
 
         <h1 className="text-4xl font-bold text-white mb-4 py-10">
     Join Sepnoty Club<br></br> for exclusive  <span className="text-[#F3CA49]">resources growth</span>
   </h1>
   {/* Membership and Payment Cards */}
   <div className="relative z-10 flex justify-between mt-12">  {/* Changed justify-center to justify-between */}
-  {/* <Image
+  {/* <img
     src="glass.png"
     width={200}
     height={50}
     alt="Membership Card"
   />
-  <Image
+  <img
     src="glass2.png"
     width={200}
     height={50}
@@ -564,8 +569,8 @@ export default function Home() {
             {/* Header Section */}
             <div className="space-y-7 relative">
               <div className="flex items-center gap-5">
-                <Image 
-                  src="Pseudo.png"
+                <img 
+                  src="/Pseudo.png"
                   alt="FAQ Icon"
                   className="w-7 h-3 left-[-20]"
                 />
@@ -601,8 +606,8 @@ export default function Home() {
                     <div className={`transform transition-transform duration-300 ${
                       openIndex === index ? 'rotate-180' : 'rotate-0'
                     }`}>
-                      <Image 
-                        src="arrow.svg"
+                      <img 
+                        src="/arrow.svg"
                         alt="Toggle"
                         width={24}
                         height={24}
@@ -618,8 +623,8 @@ export default function Home() {
                       {item.answer}
                       {index === 1 && (
                         <button className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-[2rem] text-lg font-medium flex items-center gap-3 transition-colors mt-6">
-                          <Image 
-                            src="/images/button-arrow.svg"
+                          <img 
+                            src="UIUX.svg"
                             alt="Arrow"
                             width={24}
                             height={24}
@@ -636,8 +641,8 @@ export default function Home() {
 
           {/* Right Image Column */}
           <div className="lg:w-[45%] w-full relative aspect-square lg:aspect-[0.8/1]">
-            <Image 
-              src="faq.png"
+            <img 
+              src="/faq.png"
               alt="FAQ Illustration"
               className="object-contain object-center"
               
@@ -651,8 +656,8 @@ export default function Home() {
 
     <section className="relative bg-[#0D0D1E] text-white py-10 px-20 md:px-12 ">
       {/* Background Text */}
-      <Image 
-                  src="Pseudo.png"
+      <img 
+                  src="/Pseudo.png"
                   alt="FAQ Icon"
                   className="w-7 h-3  "
                 />
@@ -676,8 +681,8 @@ export default function Home() {
   {/* Card 1 */}
   <div className="bg-[#1E1E30] p-8 rounded-xl text-center shadow-xl hover:transform hover:scale-105 transition-transform duration-300 group">
     <div className="mb-6 inline-flex items-center justify-center w-20 h-20 rounded-full bg-[#2D2D42] group-hover:bg-[#3A3A5A] transition-colors">
-      <Image 
-        src="feature-icon-1.png.png" 
+      <img 
+        src="/feature-icon-1.png.png" 
         width={40} 
         height={40} 
         alt="Projects" 
@@ -695,8 +700,8 @@ export default function Home() {
   {/* Card 2 */}
   <div className="bg-[#1E1E30] p-8 rounded-xl text-center shadow-xl hover:transform hover:scale-105 transition-transform duration-300 group">
     <div className="mb-6 inline-flex items-center justify-center w-20 h-20 rounded-full bg-[#2D2D42] group-hover:bg-[#3A3A5A] transition-colors">
-      <Image 
-        src="feature-icon-2.png.png" 
+      <img 
+        src="/feature-icon-2.png.png" 
         width={40} 
         height={40} 
         alt="Clients" 
@@ -713,8 +718,8 @@ export default function Home() {
   {/* Card 3 */}
   <div className="bg-[#1E1E30] p-8 rounded-xl text-center shadow-xl hover:transform hover:scale-105 transition-transform duration-300 group">
     <div className="mb-6 inline-flex items-center justify-center w-20 h-20 rounded-full bg-[#2D2D42] group-hover:bg-[#3A3A5A] transition-colors">
-      <Image 
-        src="feature-icon-3.png.png" 
+      <img 
+        src="/feature-icon-3.png.png" 
         width={40} 
         height={40} 
         alt="Teams" 
@@ -741,7 +746,7 @@ export default function Home() {
       </h1>
       <div className="flex justify-center "> {/* Added gap-x-8 */}
   {/* Left Side - Heading */}
-  <Image className="h-3 w-13 absolute top-10 " src="Pseudo.png" alt="" />
+  <img className="h-3 w-13 absolute top-10 " src="/Pseudo.png" alt="" />
   </div> 
                        
       <h2 className="text-center text-2xl md:text-3xl font-semibold">
@@ -750,8 +755,8 @@ export default function Home() {
 
       {/* Left Side Icons */}
       <div className="absolute left-0 top-0 bottom-0 w-100">
-    <Image 
-      src="bg-pattern-8.png" 
+    <img 
+      src="/bg-pattern-8.png" 
       alt="Left Icons" 
       className="opacity-80 h-full w-auto object-cover"
     />
@@ -759,8 +764,8 @@ export default function Home() {
 
       {/* Right Side Icons */}
       <div className="absolute right-0 top-0 bottom-0 w-100">
-    <Image 
-      src="bg2.png" 
+    <img 
+      src="/bg2.png" 
       alt="Right Icons" 
       className="opacity-80 h-full w-auto object-cover"
     />
@@ -769,7 +774,7 @@ export default function Home() {
       <div className="flex justify-center items-center mt-12 relative">
         {/* Left Button */}
         <button onClick={prevTestimonial} className="absolute left-0 md:left-10 text-xl">
-          <Image src="Buttonleft.png" alt="" className="text-purple-400 hover:text-white" />
+          <img src="/Buttonleft.png" alt="" className="text-purple-400 hover:text-white" />
         </button>
 
         {/* Testimonials */}
@@ -782,7 +787,7 @@ export default function Home() {
               }`}
             >
               <blockquote className="text-lg italic relative">
-              <Image src="span.icon.svg" alt="" className="p-3"/>
+              <img src="/span.icon.svg" alt="" className="p-3"/>
                 <span className="text-purple-400 text-3xl">&ldquo;</span>
                 {testimonial.quote}
               </blockquote>
@@ -792,7 +797,7 @@ export default function Home() {
               </div>
               {/* Placeholder for Chat Icon */}
               <div className="flex justify-end mt-4">
-                <Image src="icon-chat.svg" alt="Chat Icon" width={38} height={38} />
+                <img src="/icon-chat.svg" alt="Chat Icon" width={38} height={38} />
               </div>
             </div>
           ))}
@@ -800,7 +805,7 @@ export default function Home() {
 
         {/* Right Button */}
         <button onClick={nextTestimonial} className="absolute right-0 md:right-10 text-xl">
-          <Image src="Buttonright.png" alt="" className="text-purple-400 hover:text-white" />
+          <img src="/Buttonright.png" alt="" className="text-purple-400 hover:text-white" />
         </button>
       </div>
 
@@ -825,13 +830,13 @@ export default function Home() {
       </h1>
       <div className="flex justify-center "> {/* Added gap-x-8 */}
   {/* Left Side - Heading */}
-  <Image className="h-3 w-13 absolute top-[-10] left-[170] " src="Pseudo.png" alt="" />
+  <img className="h-3 w-13 absolute top-[-10] left-[170] " src="/Pseudo.png" alt="" />
   </div> 
       {/* Left Side: Illustration */}
       <div className="w-full md:w-1/2 flex justify-center">
         {/* Replace this image with your actual one */}
-        <Image 
-          src="WomanContact.png" // TODO: Replace with actual image
+        <img 
+          src="/WomanContact.png" // TODO: Replace with actual image
           alt="Woman working on laptop"
           width={500}
           height={400}
@@ -890,7 +895,7 @@ export default function Home() {
 
     <Footer/>
     </section>
-    
+    </>
 
 
 

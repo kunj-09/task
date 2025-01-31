@@ -12,8 +12,8 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
         {/* Logo Section */}
         <div className="flex items-center space-x-3">
-          <div className="relative h-10 w-10">
-            <Img src="/SepnotyLogo.png" alt="Sepnoty Logo" />
+          <div className="relative h-20 w-20">
+            <img  src="/SepnotyLogo.png"  alt="Sepnoty Logo" />
           </div>
           <span className="text-white text-2xl font-semibold italic">Sepnoty</span>
         </div>
