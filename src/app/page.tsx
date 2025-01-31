@@ -191,7 +191,7 @@ export default function Home() {
       {/* Right Side - Description */}
       <div className="max-w-lg mt-1 px-4 lg:px-0"> 
         <p className="text-gray-300">
-          At Sepnoty, we're dedicated to creating impactful, empathetic AI solutions that
+          At Sepnoty, we&apos;re dedicated to creating impactful, empathetic AI solutions that
           connect people and brands across the globe, fostering growth and meaningful interactions.
         </p>
       </div>
@@ -742,7 +742,7 @@ export default function Home() {
 <section className="relative bg-[#0b0d1c] text-white py-20 px-6 md:px-16">
       {/* Background Text "SAY'S" */}
       <h1 className="absolute text-[6rem] font-bold text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.3)] top-[-20] left-40 right-40 text-center select-none">
-            SAY'S 
+            SAY&apos;S 
       </h1>
       <div className="flex justify-center "> {/* Added gap-x-8 */}
   {/* Left Side - Heading */}
@@ -750,7 +750,7 @@ export default function Home() {
   </div> 
                        
       <h2 className="text-center text-2xl md:text-3xl font-semibold">
-        People's Say About Our <br /> Support & Services
+        People&apos;s Say About Our <br /> Support & Services
       </h2>
 
       {/* Left Side Icons */}
