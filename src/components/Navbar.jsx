@@ -13,7 +13,7 @@ export default function Navbar() {
         {/* Logo Section */}
         <div className="flex items-center space-x-3">
           <div className="relative h-10 w-10">
-            <img  src="/SepnotyLogo.png" alt="Sepnoty Logo" />
+            <Img src="/SepnotyLogo.png" alt="Sepnoty Logo" />
           </div>
           <span className="text-white text-2xl font-semibold italic">Sepnoty</span>
         </div>
