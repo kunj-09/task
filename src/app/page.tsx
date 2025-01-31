@@ -141,11 +141,10 @@ export default function Home() {
           <div className="relative z-10">
             {/* Main Image */}
             <div className="relative w-full aspect-square">
-              <Image
+              <img 
                 src="/Forground.png"
                 alt="Main Visual"
-                layout="fill"
-                objectFit="contain"
+                
               />
 
             </div>
@@ -619,7 +618,7 @@ export default function Home() {
                       {item.answer}
                       {index === 1 && (
                         <button className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-[2rem] text-lg font-medium flex items-center gap-3 transition-colors mt-6">
-                          <Image
+                          <Image 
                             src="/images/button-arrow.svg"
                             alt="Arrow"
                             width={24}
