@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 import { FaReact, FaNodeJs, FaPython, FaJava, FaHtml5, FaCss3, FaJs, FaBootstrap } from 'react-icons/fa';
 import Marquee from "react-fast-marquee";
 
-
+// hiiii  
 
 
 export default function Home() {
