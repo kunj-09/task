@@ -29,7 +29,7 @@ export default function Home() {
   //   "React.svg",
   // ];
   // const [position, setPosition] = useState(0);
-  const totalIcons = icons.length;
+  // const totalIcons = icons.length;
 
   // const handleNext = () => {
   //   setPosition((prev) => (prev + 1) % totalIcons); // Loop to the start after the last icon
@@ -88,14 +88,14 @@ export default function Home() {
       )
     }
   ];
-  const [index, setIndex] = useState(0);
+  // const [index, setIndex] = useState(0);
 
-  const nextTestimonial = () => {
-    setIndex((prev) => (prev + 1) % testimonials.length);
-  };
-  const prevTestimonial = () => {
-    setIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
+  // const nextTestimonial = () => {
+  //   setIndex((prev) => (prev + 1) % testimonials.length);
+  // };
+  // const prevTestimonial = () => {
+  //   setIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  // };
 
   return (
     <>
@@ -182,15 +182,40 @@ export default function Home() {
         <div className="bg-[#000A1F] text-white p-8 rounded-xl">
           {/* Main Section */}
           <div className="relative w-full">
+            
             {/* Background Text */}
-            <div className="absolute text-[8rem] [-webkit-text-stroke:1px_rgba(255,255,255,0.3)] font-bold text-transparent top-[-100] left-20 w-full text-left select-none max-lg:text-[4rem] max-lg:left-10">
-              BRAND
-            </div>
+            <div 
+  className="
+    absolute 
+    text-[8rem] max-lg:text-[4rem]      /* Responsive text size */
+    [-webkit-text-stroke:1px_rgba(255,255,255,0.3)] 
+    font-bold 
+    text-transparent 
+    top-[-100px]                      /* Adjusted unit for clarity */
+    left-20 max-lg:left-10            /* Responsive left spacing */
+    w-full 
+    text-left 
+    select-none 
+    z-10                            /* CHANGED: Added z-10 to place this element behind the pseudo image */
+  "
+>
+  BRAND
+</div>
 
             {/* Left Side - Heading */}
-            <div className="flex flex-col lg:flex-row justify-center items-center text-center lg:text-left">
-              {/* Left Side - Heading */}
-              <img className="h-3 w-13 absolute left-20 top-[-20] max-lg:left-10 max-lg:top-[-10]" src="/Pseudo.png" alt="" />
+            <div className="flex flex-col lg:flex-row justify-center items-center text-center lg:text-left relative w-full z-20">
+  {/* Pseudo Image (placed on top of the background text on all devices) */}
+  <img
+    src="/Pseudo.png"
+    alt=""
+    className="
+      h-3 w-13 
+      absolute 
+      left-20 top-[-20px]              /* Adjusted unit for clarity */
+      max-lg:left-10 max-lg:top-[-10px]  /* Responsive adjustments for mobile */
+      z-20                           /* CHANGED: Added z-20 so that this image always appears above the background text */
+    "
+  />
               <div className="max-w-xl px-4 lg:px-0">
                 <h1 className="text-4xl font-bold relative mb-2 max-lg:text-2xl">
                   Sepnoty: <span className="text-green-400">Building</span> Meaningful Connections
@@ -246,13 +271,31 @@ export default function Home() {
             </div>
 
             {/* Right Side Content */}
-            <div className="lg:w-1/2 text-center lg:text-left mt-10 lg:mt-0 relative w-full">
-              <img className="h-3 w-13 absolute left-20 top-[-20]" src="/Pseudo.png" alt="" />
-
+    <div className="lg:w-1/2 text-center lg:text-left mt-10 lg:mt-0 relative w-full">
+      {/* Pseudo Image (placed above the background text) */}
+      <img
+        src="/Pseudo.png"
+        alt=""
+        className="h-3 w-13 absolute left-20 top-[-20px] z-20" 
+        // CHANGED: Added "z-20" to ensure this image appears above the background text
+      />
               {/* Background Text */}
-              <span className="absolute text-[7rem] font-bold text-transparent  [-webkit-text-stroke:1px_rgba(255,255,255,0.3)] top-[-100px] select-none">
-                FEATURES
-              </span>
+              <h1
+    className="
+      absolute 
+      text-3xl md:text-[6rem]
+      font-bold 
+      text-transparent 
+      [-webkit-text-stroke:1px_rgba(255,255,255,0.3)]
+      top-[-10px] md:top-[-20px]
+      left-1/2 transform -translate-x-1/2   /* CHANGED: Centered horizontally using left-1/2 and transform -translate-x-1/2 */
+      text-center 
+      select-none 
+      z-10
+    "
+  >
+    FEATURES
+  </h1>
               <h2 className="text-4xl font-bold">
                 <span className="text-green-400">Explore</span> Our Professional <br /> Business <span className="text-purple-400">Solutions</span>
               </h2>
@@ -320,128 +363,155 @@ export default function Home() {
 
 
         <section className="relative bg-[#0b0d1c] text-white py-16 px-20 ">
-          <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center  justify-between ">
-            {/* Left Content */}
+  <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between ">
+    {/* Left Content */}
 
-            <div className="absolute text-[6rem] font-bold text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.3)] top-20 select-none">
-              WHO WE ARE?
-            </div>
-            <img className="h-3 w-13 absolute  top-40" src="/Pseudo.png" alt="" />
-            <div className="md:w-1/2 text-center md:text-left ">
+    {/* --- CHANGED: Updated mobile positioning and ensured one-line text --- */}
+    <div
+      className="absolute 
+                 text-[3rem] sm:text-[4rem] md:text-[6rem]   /* Responsive sizes */
+                 font-bold text-transparent 
+                 [-webkit-text-stroke:1px_rgba(255,255,255,0.3)]
+                 top-5 md:top-20   /* Mobile: top-10, Desktop: top-20 */
+                 whitespace-nowrap  /* Prevent text wrapping */
+                 select-none z-0"
+    >
+      WHO WE ARE?
+    </div>
 
-              <h2 className="text-5xl font-bold uppercase relative text-gray-800">
+    {/* --- CHANGED: Added z-10 to ensure this image appears above the background text --- */}
+    <img
+       className="h-3 w-13 absolute top-5 md:top-40 z-10" 
+      src="/Pseudo.png"
+      alt=""
+    />
 
-              </h2>
-              <p className="mt-4 text-lg font-medium">
-                We blend <span className="text-green-400 font-bold">Empathy</span> &
-                <span className="text-purple-400 font-bold"> innovation</span> to drive
-                business growth with AI and <span className="text-blue-400 font-bold">digital solutions</span>.
-              </p>
+    <div className="md:w-1/2 text-center md:text-left ">
+      <h2 className="text-5xl font-bold uppercase relative text-gray-800">
+      </h2>
+      <p className="mt-4 text-lg font-medium">
+        We blend <span className="text-green-400 font-bold">Empathy</span> &
+        <span className="text-purple-400 font-bold"> innovation</span> to drive
+        business growth with AI and <span className="text-blue-400 font-bold">digital solutions</span>.
+      </p>
 
-              {/* Feature List */}
-              <div className="mt-6 flex flex-wrap gap-4">
-                {['Tech Solutions', 'IT Consulting', 'Web Solutions', 'Business Growth', 'Product Design'].map(
-                  (item, index) => (
-                    <div
-                      key={index}
-                      className="flex items-center gap-2 bg-gray-900 text-white py-2 px-4 rounded-lg shadow-md"
-                    >
-                      <img
-                        src="/Check.svg" // REPLACE WITH ACTUAL IMAGE
-                        alt="Check"
-                        width={20}
-                        height={20}
-                      />
-                      <span className="font-medium">{item}</span>
-                    </div>
-                  )
-                )}
-              </div>
-            </div>
-
-            {/* Right Image */}
-            <div className="md:w-1/2 flex justify-center mt-10 md:mt-0">
+      {/* Feature List */}
+      <div className="mt-6 flex flex-wrap gap-4">
+        {['Tech Solutions', 'IT Consulting', 'Web Solutions', 'Business Growth', 'Product Design'].map(
+          (item, index) => (
+            <div
+              key={index}
+              className="flex items-center gap-2 bg-gray-900 text-white py-2 px-4 rounded-lg shadow-md"
+            >
               <img
-                src="/About.png" // REPLACE WITH ACTUAL IMAGE
-                alt="Who We Are Illustration"
-                width={450}
-                height={450}
+                src="/Check.svg" // REPLACE WITH ACTUAL IMAGE
+                alt="Check"
+                width={20}
+                height={20}
               />
+              <span className="font-medium">{item}</span>
             </div>
-          </div>
-        </section>
+          )
+        )}
+      </div>
+    </div>
+
+    {/* Right Image */}
+    <div className="md:w-1/2 flex justify-center mt-10 md:mt-0">
+      <img
+        src="/About.png" // REPLACE WITH ACTUAL IMAGE
+        alt="Who We Are Illustration"
+        width={450}
+        height={450}
+      />
+    </div>
+  </div>
+</section>
 
 
 
 
         {/* fourth section   */}
 
-        <section className="relative bg-[#0b0d1c] text-white py-16 px-20 text-center">
-          {/* Background Text */}
-          <div className="relative w-full ">
-            {/* Background Text */}
-            <div className="absolute text-[8rem] [-webkit-text-stroke:1px_rgba(255,255,255,0.3)] font-bold text-transparent  top-[-100] text-center w-full text-left select-none">
-              SERVICE
-            </div>
-            <div className="flex justify-center "> {/* Added gap-x-8 */}
-              {/* Left Side - Heading */}
-              <img className="h-3 w-13 absolute top-[-10] " src="/Pseudo.png" alt="" />
-            </div>
+        <section className="relative bg-[#0b0d1c] text-white 
+                   py-10 md:py-16          {/* CHANGED: Mobile padding reduced; Desktop stays py-16 */}
+                   px-4 md:px-20           {/* CHANGED: Mobile side padding reduced; Desktop stays px-20 */}
+                   text-center">
+  {/* Background Text */}
+  <div className="relative w-full">
+    {/* Background Text */}
+    <div className="absolute 
+                text-[4rem] md:text-[8rem]   {/* CHANGED: On mobile, font size is 4rem; on desktop, remains 8rem */}
+                [-webkit-text-stroke:1px_rgba(255,255,255,0.3)] 
+                font-bold text-transparent 
+                top-[-30] md:top-[-100]      {/* CHANGED: On mobile, top is -30; on desktop, remains -100 */}
+                text-center w-full text-left 
+                select-none whitespace-nowrap">  {/* CHANGED: Added whitespace-nowrap to keep text on one line */}
+      SERVICE
+    </div>
+    <div className="flex justify-center">
+      {/* Left Side - Heading */}
+      <img className="h-3 w-13 absolute 
+                  top-[-20] md:top-[-10]  {/* CHANGED: On mobile, pseudo image is raised to top -50; on desktop, remains at -10 */}
+                  z-10"                
+           src="/Pseudo.png " alt="" />
+    </div>
+  </div>
+  {/* Heading */}
+  <h2 className="relative z-10 text-4xl font-semibold mb-10">
+    <span className="text-green-400">Powerful</span> Features to Fuel Your Business<br /> Growth and <span className="text-purple-400">Success</span>
+  </h2>
+
+  {/* Services Grid */}
+  <div className="relative flex flex-wrap justify-center items-center gap-10 px-10">
+    {/* Left Side Items */}
+    <div className="flex flex-col gap-8">
+      {services.slice(2, 4).map((service, index) => (
+        <div key={index} className="flex items-center gap-4 bg-gray-800 rounded-lg px-6 py-4 w-80 shadow-md relative">
+          <img src={service.img} alt={service.title} width={50} height={50} />
+          <div className="text-left">
+            <h3 className="text-lg font-semibold">{service.title}</h3>
+            <p className="text-sm text-gray-400">{service.desc}</p>
           </div>
-          {/* Heading */}
-          <h2 className="relative z-10 text-4xl font-semibold mb-10">
-            <span className="text-green-400">Powerful</span> Features to Fuel Your Business<br></br> Growth and <span className="text-purple-400">Success</span>
-          </h2>
+          <span className="absolute right-4 text-gray-400">➝</span>
+        </div>
+      ))}
+    </div>
 
-          {/* Services Grid */}
-          <div className="relative flex flex-wrap justify-center items-center gap-10 px-10">
-            {/* Left Side Items */}
-            <div className="flex flex-col gap-8">
-              {services.slice(2, 4).map((service, index) => (
-                <div key={index} className="flex items-center gap-4 bg-gray-800 rounded-lg px-6 py-4 w-80 shadow-md relative">
-                  <img src={service.img} alt={service.title} width={50} height={50} />
-                  <div className="text-left">
-                    <h3 className="text-lg font-semibold">{service.title}</h3>
-                    <p className="text-sm text-gray-400">{service.desc}</p>
-                  </div>
-                  <span className="absolute right-4 text-gray-400">➝</span>
-                </div>
-              ))}
-            </div>
+    {/* Center Column with Top Card and Image */}
+    <div className="flex flex-col gap-8">
+      {/* Moved Bottom Service to Top */}
+      <div className="flex items-center gap-4 bg-gray-800 rounded-lg px-6 py-4 w-80 shadow-md relative">
+        <img src={services[4].img} alt={services[4].title} width={50} height={50} />
+        <div className="text-left">
+          <h3 className="text-lg font-semibold">{services[4].title}</h3>
+          <p className="text-sm text-gray-400">{services[4].desc}</p>
+        </div>
+        <span className="absolute right-4 text-gray-400">➝</span>
+      </div>
 
-            {/* Center Column with Top Card and Image */}
-            <div className="flex flex-col gap-8">
-              {/* Moved Bottom Service to Top */}
-              <div className="flex items-center gap-4 bg-gray-800 rounded-lg px-6 py-4 w-80 shadow-md relative">
-                <img src={services[4].img} alt={services[4].title} width={50} height={50} />
-                <div className="text-left">
-                  <h3 className="text-lg font-semibold">{services[4].title}</h3>
-                  <p className="text-sm text-gray-400">{services[4].desc}</p>
-                </div>
-                <span className="absolute right-4 text-gray-400">➝</span>
-              </div>
+      {/* Center Image */}
+      <div className="relative w-72 h-72">
+        <img src="/Service.png" alt="Graph Illustration" />
+      </div>
+    </div>
 
-              {/* Center Image */}
-              <div className="relative w-72 h-72">
-                <img src="/Service.png" alt="Graph Illustration" />
-              </div>
-            </div>
-
-            {/* Right Side Items */}
-            <div className="flex flex-col gap-8">
-              {services.slice(0, 2).map((service, index) => (
-                <div key={index} className="flex items-center gap-4 bg-gray-800 rounded-lg px-6 py-4 w-80 shadow-md relative">
-                  <img src={service.img} alt={service.title} width={50} height={50} />
-                  <div className="text-left">
-                    <h3 className="text-lg font-semibold">{service.title}</h3>
-                    <p className="text-sm text-gray-400">{service.desc}</p>
-                  </div>
-                  <span className="absolute right-4 text-gray-400">➝</span>
-                </div>
-              ))}
-            </div>
+    {/* Right Side Items */}
+    <div className="flex flex-col gap-8">
+      {services.slice(0, 2).map((service, index) => (
+        <div key={index} className="flex items-center gap-4 bg-gray-800 rounded-lg px-6 py-4 w-80 shadow-md relative">
+          <img src={service.img} alt={service.title} width={50} height={50} />
+          <div className="text-left">
+            <h3 className="text-lg font-semibold">{service.title}</h3>
+            <p className="text-sm text-gray-400">{service.desc}</p>
           </div>
-        </section>
+          <span className="absolute right-4 text-gray-400">➝</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
 
 
 
@@ -452,101 +522,113 @@ export default function Home() {
 
 
         <section className="bg-[#0b0d1c] relative flex flex-col items-center py-16 px-4 md:px-8 lg:px-16 text-center">
-          {/* Background Text */}
-          <div className="absolute text-[6rem] font-bold text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.3)] top-[-20] text-center select-none">
-            SEPNOTY CLUB
-          </div>
-          {/* Main Content */}
-          <div className="relative z-10 max-w-4xl mx-auto text-center">
-            <img className="h-3 w-13 absolute left-20 top-[-20]" src="/Pseudo.png" alt="" />
+  {/* Background Text */}
+  <div 
+    className="absolute 
+               text-[3rem] sm:text-[4rem] md:text-[6rem]   {/* CHANGED: Responsive text size for mobile (3rem/4rem) while keeping 6rem on desktop */}
+               font-bold text-transparent 
+               [-webkit-text-stroke:1px_rgba(255,255,255,0.3)] 
+               top-[-20]                      {/* CHANGED: Keeping desktop top offset (-20) */}
+               text-center select-none 
+               z-0
+               "                         
+  >
+    SEPNOTY CLUB
+  </div>
+  {/* Main Content */}
+  <div className="relative z-10 max-w-4xl mx-auto text-center">
+    <img 
+      className="h-3 w-13 absolute left-20 
+                 top-[-40] md:top-[-20]      {/* CHANGED: On mobile, pseudo image is moved higher (top-[-40]); on desktop remains top-[-20] */}
+                 z-10"                   
+      src="/Pseudo.png" alt="" 
+    />
 
-            <h1 className="text-4xl font-bold text-white mb-4 py-10">
-              Join Sepnoty Club<br></br> for exclusive  <span className="text-[#F3CA49]">resources growth</span>
-            </h1>
-            {/* Membership and Payment Cards */}
-            <div className="relative z-10 flex justify-between mt-12">  {/* Changed justify-center to justify-between */}
-              {/* <img
-    src="glass.png"
-    width={200}
-    height={50}
-    alt="Membership Card"
-  />
-  <img
-    src="glass2.png"
-    width={200}
-    height={50}
-    alt="Payment Card"
-  /> */}
-            </div>
+    <h1 className="text-4xl font-bold text-white mb-4 py-10">
+      Join Sepnoty Club<br /> for exclusive  <span className="text-[#F3CA49]">resources growth</span>
+    </h1>
+    {/* Membership and Payment Cards */}
+    <div className="relative z-10 flex justify-between mt-12">
+      {/* <img
+           src="glass.png"
+           width={200}
+           height={50}
+           alt="Membership Card"
+         />
+         <img
+           src="glass2.png"
+           width={200}
+           height={50}
+           alt="Payment Card"
+         /> */}
+    </div>
 
-            <div className="flex items-center justify-center gap-4 mt-6">
-              <span>Monthly</span>
-              {/* <Switch
+    <div className="flex items-center justify-center gap-4 mt-6">
+      <span>Monthly</span>
+      {/* <Switch
             checked={billingCycle === "yearly"}
             onCheckedChange={() =>
               setBillingCycle(billingCycle === "monthly" ? "yearly" : "monthly")
             }
           /> */}
-              <span>Yearly</span>
-            </div>
-          </div>
+      <span>Yearly</span>
+    </div>
+  </div>
 
-          {/* Pricing Cards */}
-          <div className="relative flex items-center justify-center mt-12 gap-6">
-            {/* <FaArrowLeft className="text-blue-500 cursor-pointer" size={24} /> */}
+  {/* Pricing Cards */}
+  <div className="relative flex items-center justify-center mt-12 gap-6">
+    {/* <FaArrowLeft className="text-blue-500 cursor-pointer" size={24} /> */}
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {/* Basic Plan */}
-              <div className="bg-white text-black rounded-xl p-6 w-64 shadow-lg">
-                <h3 className="text-lg font-semibold">Basic</h3>
-                <p className="text-2xl font-bold">$19 <span className="text-sm">/month</span></p>
-                <ul className="mt-4 space-y-2 text-sm">
-                  <li>✅ Consequat ex proident</li>
-                  <li>✅ Deserunt sit cupidatat</li>
-                  <li>✅ Amet id ea et nisi cillum</li>
-                </ul>
-                <button className="mt-4 w-full py-2 bg-blue-500 text-white rounded-lg">
-                  Get started
-                </button>
-              </div>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {/* Basic Plan */}
+      <div className="bg-white text-black rounded-xl p-6 w-64 shadow-lg">
+        <h3 className="text-lg font-semibold">Basic</h3>
+        <p className="text-2xl font-bold">$19 <span className="text-sm">/month</span></p>
+        <ul className="mt-4 space-y-2 text-sm">
+          <li>✅ Consequat ex proident</li>
+          <li>✅ Deserunt sit cupidatat</li>
+          <li>✅ Amet id ea et nisi cillum</li>
+        </ul>
+        <button className="mt-4 w-full py-2 bg-blue-500 text-white rounded-lg">
+          Get started
+        </button>
+      </div>
 
-              {/* Essential Plan */}
-              <div className="bg-blue-500 text-white rounded-xl p-6 w-64 shadow-lg transform scale-105">
-                <h3 className="text-lg font-semibold">Most popular ✨</h3>
-                <h3 className="text-lg font-semibold">Essential</h3>
-                <p className="text-2xl font-bold">$59 <span className="text-sm">/month</span></p>
-                <ul className="mt-4 space-y-2 text-sm">
-                  <li>✅ Consequat ex proident</li>
-                  <li>✅ Deserunt sit cupidatat adipiscing</li>
-                  <li>✅ Amet id ea et nisi cillum consectetur</li>
-                  <li>✅ Excepteur nisi eiusmod proident</li>
-                  <li>✅ Magna eu anim commodo qui nisif</li>
-                </ul>
-                <button className="mt-4 w-full py-2 bg-white text-blue-500 rounded-lg">
-                  Get started
-                </button>
-              </div>
+      {/* Essential Plan */}
+      <div className="bg-blue-500 text-white rounded-xl p-6 w-64 shadow-lg transform scale-105">
+        <h3 className="text-lg font-semibold">Most popular ✨</h3>
+        <h3 className="text-lg font-semibold">Essential</h3>
+        <p className="text-2xl font-bold">$59 <span className="text-sm">/month</span></p>
+        <ul className="mt-4 space-y-2 text-sm">
+          <li>✅ Consequat ex proident</li>
+          <li>✅ Deserunt sit cupidatat adipiscing</li>
+          <li>✅ Amet id ea et nisi cillum consectetur</li>
+          <li>✅ Excepteur nisi eiusmod proident</li>
+          <li>✅ Magna eu anim commodo qui nisif</li>
+        </ul>
+        <button className="mt-4 w-full py-2 bg-white text-blue-500 rounded-lg">
+          Get started
+        </button>
+      </div>
 
-              {/* Premium Plan */}
-              <div className="bg-white text-black rounded-xl p-6 w-64 shadow-lg">
-                <h3 className="text-lg font-semibold">Premium</h3>
-                <p className="text-2xl font-bold">$119 <span className="text-sm">/month</span></p>
-                <ul className="mt-4 space-y-2 text-sm">
-                  <li>✅ Consequat ex proident</li>
-                  <li>✅ Deserunt sit cupidatat</li>
-                  <li>✅ Amet id ea et nisi cillum</li>
-                </ul>
-                <button className="mt-4 w-full py-2 bg-blue-500 text-white rounded-lg">
-                  Get started
-                </button>
-              </div>
-            </div>
+      {/* Premium Plan */}
+      <div className="bg-white text-black rounded-xl p-6 w-64 shadow-lg">
+        <h3 className="text-lg font-semibold">Premium</h3>
+        <p className="text-2xl font-bold">$119 <span className="text-sm">/month</span></p>
+        <ul className="mt-4 space-y-2 text-sm">
+          <li>✅ Consequat ex proident</li>
+          <li>✅ Deserunt sit cupidatat</li>
+          <li>✅ Amet id ea et nisi cillum</li>
+        </ul>
+        <button className="mt-4 w-full py-2 bg-blue-500 text-white rounded-lg">
+          Get started
+        </button>
+      </div>
+    </div>
 
-            {/* <FaArrowRight className="text-blue-500 cursor-pointer" size={24} /> */}
-          </div>
-
-
-        </section>
+    {/* <FaArrowRight className="text-blue-500 cursor-pointer" size={24} /> */}
+  </div>
+</section>
 
 
 
@@ -650,99 +732,84 @@ export default function Home() {
           </div>
         </section>
 
+
+
         {/* Seventh section  */}
 
-        <section className="relative bg-[#0D0D1E] text-white py-10 px-20 md:px-12 ">
-  {/* Pseudo Image (Now absolutely positioned so it can overlap the background text) */}
+        <section className="relative bg-[#0D0D1E] text-white py-10 px-6 sm:px-12 md:px-20">
+  {/* Pseudo Image */}
   <img
     src="/Pseudo.png"
     alt="FAQ Icon"
-    className="absolute w-7 h-3 top-[-30px] left-1/2 transform -translate-x-1/2 z-20" 
-    
+    className="absolute w-20 h-3 top-[-1px] left-1/2 transform -translate-x-1/2 z-20"
   />
 
   {/* Background Text */}
   <h1
     className="
       absolute 
-      text-4xl md:text-[6rem]
+      text-3xl sm:text-5xl md:text-[6rem]
       font-bold 
       text-transparent 
       [-webkit-text-stroke:1px_rgba(255,255,255,0.3)]
-      top-[-10px] md:top-[-20px]      {/* CHANGED: Ensured the top values are responsive */}
-      left-5 md:left-40              {/* CHANGED: Responsive left spacing */}
-      right-5 md:right-40            {/* CHANGED: Responsive right spacing */}
+      top-[-5px] sm:top-[-15px] md:top-[-20px]
+      left-4 sm:left-10 md:left-40
+      right-4 sm:right-10 md:right-40
       text-center 
       select-none 
       z-10
     "
   >
-    ACHIEVEMNETS
+    ACHIEVEMENTS
   </h1>
 
   {/* Heading and Description */}
-  <div className="text-center mb-12 relative z-10">
-    <h2 className="text-xl font-bold text-white">Explore Our Company</h2>
-    <h3 className="text-3xl font-bold text-purple-400">Milestones</h3>
-    <p className="mt-4 text-gray-300 max-w-xl mx-auto">
+  <div className="text-center mb-8 sm:mb-12 relative z-10">
+    <h2 className="text-lg sm:text-xl font-bold text-white">Explore Our Company</h2>
+    <h3 className="text-2xl sm:text-3xl font-bold text-purple-400">Milestones</h3>
+    <p className="mt-3 sm:mt-4 text-gray-300 max-w-lg sm:max-w-xl mx-auto text-sm sm:text-base">
       Discover the milestones that have shaped our journey. Our achievements reflect our
       commitment to innovation, empathy, and creating meaningful impact.
     </p>
   </div>
 
   {/* Achievements Cards */}
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto px-4">
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto px-4">
     {/* Card 1 */}
-    <div className="bg-[#1E1E30] p-8 rounded-xl text-center shadow-xl hover:transform hover:scale-105 transition-transform duration-300 group">
-      <div className="mb-6 inline-flex items-center justify-center w-20 h-20 rounded-full bg-[#2D2D42] group-hover:bg-[#3A3A5A] transition-colors">
-        <img
-          src="/feature-icon-1.png.png"
-          width={40}
-          height={40}
-          alt="Projects"
-          className="text-blue-500"
-        />
+    <div className="bg-[#1E1E30] p-6 sm:p-8 rounded-xl text-center shadow-xl hover:scale-105 transition-transform duration-300 group">
+      <div className="mb-5 sm:mb-6 inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-[#2D2D42] group-hover:bg-[#3A3A5A] transition-colors">
+        <img src="/feature-icon-1.png" width={32} height={32} className="sm:w-10 sm:h-10" alt="Projects" />
       </div>
-      <h3 className="text-4xl font-bold mb-2 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+      <h3 className="text-3xl sm:text-4xl font-bold mb-1 sm:mb-2 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
         017+
       </h3>
-      <p className="text-gray-300 uppercase text-sm tracking-widest font-medium">
+      <p className="text-gray-300 uppercase text-xs sm:text-sm tracking-widest font-medium">
         Project Completed
       </p>
     </div>
 
     {/* Card 2 */}
-    <div className="bg-[#1E1E30] p-8 rounded-xl text-center shadow-xl hover:transform hover:scale-105 transition-transform duration-300 group">
-      <div className="mb-6 inline-flex items-center justify-center w-20 h-20 rounded-full bg-[#2D2D42] group-hover:bg-[#3A3A5A] transition-colors">
-        <img
-          src="/feature-icon-2.png.png"
-          width={40}
-          height={40}
-          alt="Clients"
-        />
+    <div className="bg-[#1E1E30] p-6 sm:p-8 rounded-xl text-center shadow-xl hover:scale-105 transition-transform duration-300 group">
+      <div className="mb-5 sm:mb-6 inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-[#2D2D42] group-hover:bg-[#3A3A5A] transition-colors">
+        <img src="/feature-icon-2.png" width={32} height={32} className="sm:w-10 sm:h-10" alt="Clients" />
       </div>
-      <h3 className="text-4xl font-bold mb-2 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+      <h3 className="text-3xl sm:text-4xl font-bold mb-1 sm:mb-2 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
         087+
       </h3>
-      <p className="text-gray-300 uppercase text-sm tracking-widest font-medium">
+      <p className="text-gray-300 uppercase text-xs sm:text-sm tracking-widest font-medium">
         Satisfied Clients
       </p>
     </div>
 
     {/* Card 3 */}
-    <div className="bg-[#1E1E30] p-8 rounded-xl text-center shadow-xl hover:transform hover:scale-105 transition-transform duration-300 group">
-      <div className="mb-6 inline-flex items-center justify-center w-20 h-20 rounded-full bg-[#2D2D42] group-hover:bg-[#3A3A5A] transition-colors">
-        <img
-          src="/feature-icon-3.png.png"
-          width={40}
-          height={40}
-          alt="Teams"
-        />
+    <div className="bg-[#1E1E30] p-6 sm:p-8 rounded-xl text-center shadow-xl hover:scale-105 transition-transform duration-300 group">
+      <div className="mb-5 sm:mb-6 inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-[#2D2D42] group-hover:bg-[#3A3A5A] transition-colors">
+        <img src="/feature-icon-3.png" width={32} height={32} className="sm:w-10 sm:h-10" alt="Teams" />
       </div>
-      <h3 className="text-4xl font-bold mb-2 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+      <h3 className="text-3xl sm:text-4xl font-bold mb-1 sm:mb-2 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
         09+
       </h3>
-      <p className="text-gray-300 uppercase text-sm tracking-widest font-medium">
+      <p className="text-gray-300 uppercase text-xs sm:text-sm tracking-widest font-medium">
         Expert Teams
       </p>
     </div>
@@ -757,68 +824,66 @@ export default function Home() {
 
 
         <section className="relative bg-[#0b0d1c] text-white py-20 px-6 md:px-16">
-          {/* Background Text "SAY'S" */}
-          <h1 className="absolute text-[4rem] md:text-[6rem] font-bold text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.3)] top-5 md:top-[-20] left-1/2 -translate-x-1/2 text-center select-none">
-            SAY&apos;S
-          </h1>
-          <img className="h-3 w-13 absolute top-[40] left-[600] " src="/Pseudo.png" alt="" />
+  {/* Background Text "SAY'S" */}
+  <h1 className="absolute text-[4rem] md:text-[6rem] font-bold text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.3)] top-5 md:top-[-20] left-1/2 -translate-x-1/2 text-center select-none">
+    SAY&apos;S
+  </h1>
+  <img className="h-3 w-13 absolute top-[40px] left-[50%] transform -translate-x-1/2 md:top-[40px] md:left-[600px] md:transform-none md:translate-x-0" src="/Pseudo.png" alt="Pseudo Image" />
 
+  {/* Section Title */}
+  <h2 className="text-center text-2xl md:text-3xl font-semibold">
+    People&apos;s Say About Our <br /> Support & Services
+  </h2>
 
+  {/* Left Side Icons */}
+  <img
+    src="/bg-pattern-8.png"
+    alt="Left Icons"
+    className="absolute left-0 top-0 h-full opacity-80 hidden md:block"
+  />
 
-          {/* Section Title */}
-          <h2 className="text-center text-2xl md:text-3xl font-semibold">
-            People&apos;s Say About Our <br /> Support & Services
-          </h2>
+  {/* Right Side Icons */}
+  <img
+    src="/bg2.png"
+    alt="Right Icons"
+    className="absolute right-0 top-0 h-full opacity-80 hidden md:block"
+  />
 
-          {/* Left Side Icons */}
-          <img
-            src="/bg-pattern-8.png"
-            alt="Left Icons"
-            className="absolute left-0 top-0 h-full opacity-80 hidden md:block"
-          />
-
-          {/* Right Side Icons */}
-          <img
-            src="/bg2.png"
-            alt="Right Icons"
-            className="absolute right-0 top-0 h-full opacity-80 hidden md:block"
-          />
-
-          {/* Swiper for Testimonials */}
-          <div className="mt-12">
-            <Swiper
-              modules={[Navigation, Pagination]}
-              spaceBetween={20}
-              slidesPerView={1}
-              navigation
-              pagination={{ clickable: true }}
-              breakpoints={{
-                768: { slidesPerView: 2 },
-              }}
-              className="max-w-4xl mx-auto"
-            >
-              {testimonials.map((testimonial, i) => (
-                <SwiperSlide key={i}>
-                  <div className="bg-[#1A1A1A] p-6 rounded-lg transition-all duration-300">
-                    <blockquote className="text-lg italic relative">
-                      <img src="/span.icon.svg" alt="" className="p-3" />
-                      <span className="text-purple-400 text-3xl">&ldquo;</span>
-                      {testimonial.quote}
-                    </blockquote>
-                    <div className="mt-4">
-                      <p className="font-bold text-white">{testimonial.name}</p>
-                      <p className="text-sm text-gray-400">{testimonial.role}</p>
-                    </div>
-                    {/* Chat Icon */}
-                    <div className="flex justify-end mt-4">
-                      <img src="/icon-chat.svg" alt="Chat Icon" width={38} height={38} />
-                    </div>
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
+  {/* Swiper for Testimonials */}
+  <div className="mt-12">
+    <Swiper
+      modules={[Navigation, Pagination]}
+      spaceBetween={20}
+      slidesPerView={1}
+      navigation
+      pagination={{ clickable: true }}
+      breakpoints={{
+        768: { slidesPerView: 2 },
+      }}
+      className="max-w-4xl mx-auto"
+    >
+      {testimonials.map((testimonial, i) => (
+        <SwiperSlide key={i}>
+          <div className="bg-[#1A1A1A] p-6 rounded-lg transition-all duration-300">
+            <blockquote className="text-lg italic relative">
+              <img src="/span.icon.svg" alt="" className="p-3" />
+              <span className="text-purple-400 text-3xl">&ldquo;</span>
+              {testimonial.quote}
+            </blockquote>
+            <div className="mt-4">
+              <p className="font-bold text-white">{testimonial.name}</p>
+              <p className="text-sm text-gray-400">{testimonial.role}</p>
+            </div>
+            {/* Chat Icon */}
+            <div className="flex justify-end mt-4">
+              <img src="/icon-chat.svg" alt="Chat Icon" width={38} height={38} />
+            </div>
           </div>
-        </section>
+        </SwiperSlide>
+      ))}
+    </Swiper>
+  </div>
+</section>
 
 
 
@@ -831,8 +896,8 @@ export default function Home() {
         {/* contact section  */}
 
         <section className="relative bg-[#0b0d1c] text-white py-20 px-6 md:px-16 flex flex-col md:flex-row items-center justify-between">
-          <h1 className="absolute text-[6rem] font-bold text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.3)] top-[-20] left-40  text-center select-none">
-            CALL
+        <h1 className="absolute text-[6rem] font-bold text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.3)] top-[-20] text-center md:left-40 select-none">
+        CALL
           </h1>
           <div className="flex justify-center "> {/* Added gap-x-8 */}
             {/* Left Side - Heading */}
