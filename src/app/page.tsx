@@ -5,19 +5,25 @@ import { useState } from "react";
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import { motion } from "framer-motion";
+import { FaReact, FaNodeJs, FaPython, FaJava, FaHtml5, FaCss3, FaJs, FaBootstrap } from 'react-icons/fa';
+import Marquee from "react-fast-marquee";
+
+
 
 
 export default function Home() {
   // section icons 
-  const icons = [
-    "/React.svg",
-    "React.svg",
-    "React.svg",
-    "React.svg",
-    "DarkGithub.svg",
-    "React.svg",
-    "React.svg",
-  ];
+  const icons = [FaReact, FaNodeJs, FaPython, FaJava, FaHtml5, FaCss3, FaJs, FaBootstrap];
+
+  // const icons = [
+  //   "/React.svg",
+  //   "React.svg",
+  //   "React.svg",
+  //   "React.svg",
+  //   "DarkGithub.svg",
+  //   "React.svg",
+  //   "React.svg",
+  // ];
   const [position, setPosition] = useState(0);
   const totalIcons = icons.length;
 
@@ -199,32 +205,22 @@ export default function Home() {
   </div>
   <hr className="border-t border-gray-700 flex justify-center mt-6 w-full"/>
 
-  <div className="mt-6 flex justify-center items-center gap-4 w-full overflow-hidden">
-      {/* Left Arrow */}
-      <button onClick={handlePrev} className="p-2 rounded-full bg-gray-700 hover:bg-gray-600">
-        <img src="/Left.png" alt="" />
-      </button>
-
-      {/* Icons List - Swiper */}
-      <div className="w-64 md:w-96 flex overflow-hidden relative bg-[#fff]">
-        <motion.div
-          className="flex gap-4"
-          animate={{ x: `-${position * 60}px` }} // Moves icons left/right
-          transition={{ type: "spring", stiffness: 300, damping: 30 }}
-        >
-          {icons.concat(icons).map((icon, index) => ( // Duplicate for looping effect
-            <div key={index} className="p-3 rounded-lg">
-              <img src={icon} alt="" className="w-12 h-12" />
+  <div className="w-full overflow-hidden mt-10 relative">
+         {/* marquee  */}
+      <div className="-rotate-3   transform w-[120vw] ">
+          <Marquee
+            direction="right"
+            className="py-6 bg-[#0b0d1c] shadow-[0px_4px_31.700000762939453px_0px_rgba(0,0,0,0.25)]"
+          >
+            {[...icons, ...icons].map((Icon, index) => (
+            <div key={index} className="text-5xl md:text-6xl text-blue-500 px-4">
+              <Icon />
             </div>
           ))}
-        </motion.div>
-      </div>
+          </Marquee>
+        </div>
 
-      {/* Right Arrow */}
-      <button onClick={handleNext} className="p-2 rounded-full bg-gray-700 hover:bg-gray-600">
-        <img src="/Right.png" alt="" />
-      </button>
-    </div>
+      </div>
 </div>
 
     
@@ -821,6 +817,8 @@ export default function Home() {
         ))}
       </div>
     </section>
+
+    
       
       {/* contact section  */}
 
