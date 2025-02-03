@@ -4,7 +4,6 @@
 import { useState } from "react";
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
-import { motion } from "framer-motion";
 import { FaReact, FaNodeJs, FaPython, FaJava, FaHtml5, FaCss3, FaJs, FaBootstrap } from 'react-icons/fa';
 import Marquee from "react-fast-marquee";
 
@@ -24,16 +23,16 @@ export default function Home() {
   //   "React.svg",
   //   "React.svg",
   // ];
-  const [position, setPosition] = useState(0);
+  // const [position, setPosition] = useState(0);
   const totalIcons = icons.length;
 
-  const handleNext = () => {
-    setPosition((prev) => (prev + 1) % totalIcons); // Loop to the start after the last icon
-  };
+  // const handleNext = () => {
+  //   setPosition((prev) => (prev + 1) % totalIcons); // Loop to the start after the last icon
+  // };
 
-  const handlePrev = () => {
-    setPosition((prev) => (prev - 1 + totalIcons) % totalIcons); // Loop to the end after the first icon
-  };
+  // const handlePrev = () => {
+  //   setPosition((prev) => (prev - 1 + totalIcons) % totalIcons); // Loop to the end after the first icon
+  // };
 
 
 
