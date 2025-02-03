@@ -105,152 +105,145 @@ export default function Home() {
 
         {/* Hero Section */}
         <div className="container mx-auto px-8 pt-32 pb-24 relative">
-          {/* Wave Background */}
-          <div className="absolute bottom-0 left-0 w-full -z-10">
-            <img
-              src="/Vector.png"
-              alt="Wave Background"
-              className="w-full h-auto"
-              // height="20"
-              // width="20"
-              style={{ transform: 'translateY(40%)' }}
-            />
-          </div>
+  {/* Wave Background */}
+  <div className="absolute bottom-0 left-0 w-full -z-10">
+    <img
+      src="/Vector.png"
+      alt="Wave Background"
+      className="w-full h-auto"
+      style={{ transform: 'translateY(40%)' }} 
+    />
+  </div>
 
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Left Content */}
-            <div className="space-y-8 relative z-10">
-              <h1 className="text-5xl lg:text-6xl font-bold text-white leading-tight">
-                Connect <span className="bg-gradient-to-r from-[#A1F609] to-[#00DEEB] bg-clip-text text-transparent">
-                  SHARE</span><br />
-                <span className="text-white">Grow <span className="text-[#B933EA]">Instantly</span></span>
-              </h1>
+  <div className="grid md:grid-cols-2 gap-12 items-center">
+    {/* Left Content */}
+    <div className="space-y-8 relative z-10">
+      <h1 className="text-5xl lg:text-6xl font-bold text-white leading-tight">
+        Connect <span className="bg-gradient-to-r from-[#A1F609] to-[#00DEEB] bg-clip-text text-transparent">
+          SHARE</span><br />
+        <span className="text-white">Grow <span className="text-[#B933EA]">Instantly</span></span>
+      </h1>
 
-              <p className="text-white/80 text-lg max-w-xl">
-                Join a community that values empathy, connection, and meaningful support.
-                Discover AI-driven solutions designed to split and empower every interaction.
-              </p>
+      <p className="text-white/80 text-lg max-w-xl">
+        Join a community that values empathy, connection, and meaningful support.
+        Discover AI-driven solutions designed to split and empower every interaction.
+      </p>
 
-              <div className="flex space-x-4">
-                <button className="bg-[#9333EA] text-white px-8 py-3 rounded-lg hover:bg-[#00C4D6] transition-colors">
-                  Sign Up
-                </button>
-                <button className="text-white border-b border-transparent hover:border-white transition-colors">
-                  See How It Works
-                </button>
-              </div>
+      <div className="flex space-x-4">
+        <button className="bg-[#9333EA] text-white px-8 py-3 rounded-lg hover:bg-[#00C4D6] transition-colors">
+          Sign Up
+        </button>
+        <button className="text-white border-b border-transparent hover:border-white transition-colors">
+          See How It Works
+        </button>
+      </div>
 
-              {/* Features */}
-              <div className="flex flex-wrap gap-4 pt-8">
-                <div className="bg-white/10 text-white px-4 py-2 rounded-full">
-                  Instant Empathy Chats
-                </div>
-                <div className="bg-white/10 text-white px-4 py-2 rounded-full">
-                  Secure AI Conversations
-                </div>
-              </div>
-            </div>
-
-            {/* Right Content */}
-            <div className="relative z-10">
-              {/* Main Image */}
-              <div className="relative w-full aspect-square">
-                <img
-                  src="/Forground.png"
-                  alt="Main Visual"
-                // height="20"
-                // width="20"
-                />
-
-              </div>
-
-              {/* Cloud Placeholder */}
-              <img src="/Cloud2.png" alt="" className="absolute -top-20 -right-20 h-64 w-64 bg-white/10 rounded-full blur-xl opacity-50" />
-              <img src="/Cloud1.png" alt="" />
-
-              {/* Bulb Image */}
-              <div className="absolute top-[-100] left-[-10] w-40 md:w-40">
-                <img src="/Bulb.png" alt="Bulb Icon" />
-              </div>
-
-            </div>
-          </div>
+      {/* Features */}
+      <div className="flex flex-wrap gap-4 pt-8">
+        <div className="bg-white/10 text-white px-4 py-2 rounded-full">
+          Instant Empathy Chats
         </div>
+        <div className="bg-white/10 text-white px-4 py-2 rounded-full">
+          Secure AI Conversations
+        </div>
+      </div>
+    </div>
 
-        {/* Connection Experience Section */}
+    {/* Right Content */}
+    <div className="relative z-10">
+      {/* Main Image */}
+      <div className="relative w-full aspect-square">
+        <img
+          src="/Forground.png"
+          alt="Main Visual"
+        />
+      </div>
 
-        <div className="bg-[#000A1F] text-white p-8 rounded-xl">
-          {/* Main Section */}
-          <div className="relative w-full">
-            
-            {/* Background Text */}
-            <div 
-  className="
-    absolute 
-    text-[8rem] max-lg:text-[4rem]      /* Responsive text size */
-    [-webkit-text-stroke:1px_rgba(255,255,255,0.3)] 
-    font-bold 
-    text-transparent 
-    top-[-100px]                      /* Adjusted unit for clarity */
-    left-20 max-lg:left-10            /* Responsive left spacing */
-    w-full 
-    text-left 
-    select-none 
-    z-10                            /* CHANGED: Added z-10 to place this element behind the pseudo image */
-  "
->
-  BRAND
+      {/* Cloud Placeholder */}
+      <img src="/Cloud2.png" alt="" className="absolute -top-20 -right-20 h-64 w-64 bg-white/10 rounded-full blur-xl opacity-50" />
+      <img src="/Cloud1.png" alt="" />
+
+      {/* Bulb Image */}
+      <div className="absolute top-[-100px] left-[-100px] w-40 md:w-40">
+        <img src="/Bulb.png" alt="Bulb Icon" />
+      </div>
+    </div>
+  </div>
 </div>
 
-            {/* Left Side - Heading */}
-            <div className="flex flex-col lg:flex-row justify-center items-center text-center lg:text-left relative w-full z-20">
-  {/* Pseudo Image (placed on top of the background text on all devices) */}
-  <img
-    src="/Pseudo.png"
-    alt=""
-    className="
-      h-3 w-13 
+{/* Connection Experience Section */}
+
+<div className="bg-[#000A1F] text-white p-8 rounded-xl">
+  {/* Main Section */}
+  <div className="relative w-full">
+    
+    {/* Background Text */}
+    <div className="
       absolute 
-      left-20 top-[-20px]              /* Adjusted unit for clarity */
-      max-lg:left-10 max-lg:top-[-10px]  /* Responsive adjustments for mobile */
-      z-20                           /* CHANGED: Added z-20 so that this image always appears above the background text */
-    "
-  />
-              <div className="max-w-xl px-4 lg:px-0">
-                <h1 className="text-4xl font-bold relative mb-2 max-lg:text-2xl">
-                  Sepnoty: <span className="text-green-400">Building</span> Meaningful Connections
-                  <span className="text-purple-500">Worldwide..!</span>
-                </h1>
-              </div>
+      text-[8rem] max-lg:text-[4rem]      /* Responsive text size */
+      [-webkit-text-stroke:1px_rgba(255,255,255,0.3)] 
+      font-bold 
+      text-transparent 
+      top-[-100px]                      /* Adjusted unit for clarity */
+      left-20 max-lg:left-10            /* Responsive left spacing */
+      w-full 
+      text-left 
+      select-none 
+      z-10                            /* CHANGED: Added z-10 to place this element behind the pseudo image */
+    ">
+      BRAND
+    </div>
 
-              {/* Right Side - Description */}
-              <div className="max-w-lg mt-1 px-4 lg:px-0">
-                <p className="text-gray-300">
-                  At Sepnoty, we&apos;re dedicated to creating impactful, empathetic AI solutions that
-                  connect people and brands across the globe, fostering growth and meaningful interactions.
-                </p>
-              </div>
-            </div>
+    {/* Left Side - Heading */}
+    <div className="flex flex-col lg:flex-row justify-center items-center text-center lg:text-left relative w-full z-20">
+      {/* Pseudo Image (placed on top of the background text on all devices) */}
+      <img
+        src="/Pseudo.png"
+        alt=""
+        className="
+          h-3 w-13 
+          absolute 
+          left-20 top-[-20px]              
+          max-lg:left-10 max-lg:top-[-10px] 
+          z-20
+        "
+      />
+      <div className="max-w-xl px-4 lg:px-0">
+        <h1 className="text-4xl font-bold relative mb-2 max-lg:text-2xl">
+          Sepnoty: <span className="text-green-400">Building</span> Meaningful Connections
+          <span className="text-purple-500">Worldwide..!</span>
+        </h1>
+      </div>
+
+      {/* Right Side - Description */}
+      <div className="max-w-lg mt-1 px-4 lg:px-0">
+        <p className="text-gray-300">
+          At Sepnoty, we&apos;re dedicated to creating impactful, empathetic AI solutions that
+          connect people and brands across the globe, fostering growth and meaningful interactions.
+        </p>
+      </div>
+    </div>
+  </div>
+  <hr className="border-t border-gray-700 flex justify-center mt-6 w-full" />
+
+  <div className="w-full overflow-hidden mt-10 relative">
+    {/* marquee  */}
+    <div className="transform w-[120vw] ">
+      <Marquee
+        direction="right"
+        className="py-6 bg-[#0b0d1c] shadow-[0px_4px_31.700000762939453px_0px_rgba(0,0,0,0.25)]"
+      >
+        {[...icons, ...icons].map((Icon, index) => (
+          <div key={index} className="text-5xl md:text-6xl text-blue-500 px-4">
+            <Icon />
           </div>
-          <hr className="border-t border-gray-700 flex justify-center mt-6 w-full" />
+        ))}
+      </Marquee>
+    </div>
 
-          <div className="w-full overflow-hidden mt-10 relative">
-            {/* marquee  */}
-            <div className="transform w-[120vw] ">
-              <Marquee
-                direction="right"
-                className="py-6 bg-[#0b0d1c] shadow-[0px_4px_31.700000762939453px_0px_rgba(0,0,0,0.25)]"
-              >
-                {[...icons, ...icons].map((Icon, index) => (
-                  <div key={index} className="text-5xl md:text-6xl text-blue-500 px-4">
-                    <Icon />
-                  </div>
-                ))}
-              </Marquee>
-            </div>
+  </div>
+</div>
 
-          </div>
-        </div>
 
 
 
@@ -432,11 +425,10 @@ export default function Home() {
 
 
         {/* fourth section   */}
-
         <section className="relative bg-[#0b0d1c] text-white 
-                   py-10 md:py-16          {/* CHANGED: Mobile padding reduced; Desktop stays py-16 */}
-                   px-4 md:px-20           {/* CHANGED: Mobile side padding reduced; Desktop stays px-20 */}
-                   text-center">
+           py-10 md:py-16          {/* CHANGED: Mobile padding reduced; Desktop stays py-16 */}
+           px-4 md:px-20           {/* CHANGED: Mobile side padding reduced; Desktop stays px-20 */}
+           text-center">
   {/* Background Text */}
   <div className="relative w-full">
     {/* Background Text */}
@@ -450,13 +442,14 @@ export default function Home() {
       SERVICE
     </div>
     <div className="flex justify-center">
-      {/* Left Side - Heading */}
+      {/* Left Side - Pseudo Image */}
       <img className="h-3 w-13 absolute 
                   top-[-20] md:top-[-10]  {/* CHANGED: On mobile, pseudo image is raised to top -50; on desktop, remains at -10 */}
                   z-10"                
            src="/Pseudo.png " alt="" />
     </div>
   </div>
+  
   {/* Heading */}
   <h2 className="relative z-10 text-4xl font-semibold mb-10">
     <span className="text-green-400">Powerful</span> Features to Fuel Your Business<br /> Growth and <span className="text-purple-400">Success</span>
@@ -511,6 +504,7 @@ export default function Home() {
     </div>
   </div>
 </section>
+
 
 
 
@@ -896,65 +890,66 @@ export default function Home() {
         {/* contact section  */}
 
         <section className="relative bg-[#0b0d1c] text-white py-20 px-6 md:px-16 flex flex-col md:flex-row items-center justify-between">
-        <h1 className="absolute text-[6rem] font-bold text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.3)] top-[-20] text-center md:left-40 select-none">
-        CALL
-          </h1>
-          <div className="flex justify-center "> {/* Added gap-x-8 */}
-            {/* Left Side - Heading */}
-            <img className="h-3 w-13 absolute top-[40] left-[170] " src="/Pseudo.png" alt="" />
-          </div>
-          {/* Left Side: Illustration */}
-          <div className="w-full md:w-1/2 flex justify-center">
-            {/* Replace this image with your actual one */}
-            <img
-              src="/WomanContact.png" // TODO: Replace with actual image
-              alt="Woman working on laptop"
-              width={500}
-              height={400}
-              className="max-w-full"
-            />
-          </div>
+  <h1 className="absolute text-[6rem] font-bold text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.3)] top-[-20] md:left-40 select-none">
+    CALL
+  </h1>
+  <div className="flex justify-center"> {/* Added gap-x-8 */}
+    {/* Left Side - Pseudo Image */}
+    <img className="h-3 w-13 absolute top-[40] left-[170] md:left-[220px] lg:left-[350px]" src="/Pseudo.png" alt="" />
+  </div>
 
-          {/* Right Side: Form */}
-          <div className="w-full md:w-1/2 mt-10 md:mt-0">
-            <h2 className="text-2xl md:text-3xl font-semibold mb-6">Ready to Work Together <br /> In News Projects ?</h2>
+  {/* Left Side: Illustration */}
+  <div className="w-full md:w-1/2 flex justify-center">
+    <img
+      src="/WomanContact.png" // TODO: Replace with actual image
+      alt="Woman working on laptop"
+      width={500}
+      height={400}
+      className="max-w-full"
+    />
+  </div>
 
-            <form className="space-y-4">
-              <div className="flex space-x-4">
-                <input
-                  type="text"
-                  placeholder="Last Name"
-                  className="w-1/2 p-3 bg-gray-800 rounded-md outline-none"
-                />
-                <input
-                  type="text"
-                  placeholder="First Name"
-                  className="w-1/2 p-3 bg-gray-800 rounded-md outline-none"
-                />
-              </div>
-              <input
-                type="email"
-                placeholder="Email"
-                className="w-full p-3 bg-gray-800 rounded-md outline-none"
-              />
-              <input
-                type="text"
-                placeholder="Phone Number"
-                className="w-full p-3 bg-gray-800 rounded-md outline-none"
-              />
-              <textarea
-                placeholder="Message"
-                className="w-full p-3 bg-gray-800 rounded-md outline-none h-28"
-              ></textarea>
+  {/* Right Side: Form */}
+  <div className="w-full md:w-1/2 mt-10 md:mt-0">
+    <h2 className="text-2xl md:text-3xl font-semibold mb-6">Ready to Work Together <br /> In News Projects ?</h2>
 
-              <button
-                type="submit"
-                className="w-full p-3 bg-purple-600 rounded-md text-white font-semibold hover:bg-purple-700 transition">
-                Send it to the moon 🚀
-              </button>
-            </form>
-          </div>
-        </section>
+    <form className="space-y-4">
+      <div className="flex space-x-4">
+        <input
+          type="text"
+          placeholder="Last Name"
+          className="w-1/2 p-3 bg-gray-800 rounded-md outline-none"
+        />
+        <input
+          type="text"
+          placeholder="First Name"
+          className="w-1/2 p-3 bg-gray-800 rounded-md outline-none"
+        />
+      </div>
+      <input
+        type="email"
+        placeholder="Email"
+        className="w-full p-3 bg-gray-800 rounded-md outline-none"
+      />
+      <input
+        type="text"
+        placeholder="Phone Number"
+        className="w-full p-3 bg-gray-800 rounded-md outline-none"
+      />
+      <textarea
+        placeholder="Message"
+        className="w-full p-3 bg-gray-800 rounded-md outline-none h-28"
+      ></textarea>
+
+      <button
+        type="submit"
+        className="w-full p-3 bg-purple-600 rounded-md text-white font-semibold hover:bg-purple-700 transition">
+        Send it to the moon 🚀
+      </button>
+    </form>
+  </div>
+</section>
+
 
 
 
