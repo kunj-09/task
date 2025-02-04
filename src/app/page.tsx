@@ -526,7 +526,7 @@ export default function Home() {
                text-[3rem] sm:text-[4rem] md:text-[6rem]   {/* CHANGED: Responsive text size for mobile (3rem/4rem) while keeping 6rem on desktop */}
                font-bold text-transparent 
                [-webkit-text-stroke:1px_rgba(255,255,255,0.3)] 
-               top-[-20]                      {/* CHANGED: Keeping desktop top offset (-20) */}
+               top-[-20px]                      {/* CHANGED: Keeping desktop top offset (-20) */}
                text-center select-none 
                z-0
                "                         
@@ -537,7 +537,7 @@ export default function Home() {
   <div className="relative z-10 max-w-4xl mx-auto text-center">
     <img 
       className="h-3 w-13 absolute left-20 
-                 top-[-40] md:top-[-20]      {/* CHANGED: On mobile, pseudo image is moved higher (top-[-40]); on desktop remains top-[-20] */}
+                 top-[-40px] md:top-[-20px]      {/* CHANGED: On mobile, pseudo image is moved higher (top-[-40]); on desktop remains top-[-20] */}
                  z-10"                   
       src="/Pseudo.png" alt="" 
     />

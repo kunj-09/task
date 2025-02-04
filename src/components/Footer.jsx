@@ -8,7 +8,7 @@ const Footer = () => {
           
           {/* Logo and Contact Section */}
           <div className="md:col-span-1">
-            <div className="mb-6">
+            <div className="mb-3">
               <div className="mb-4 flex text-center">
                 <img src="/SepnotyLogo.png" alt="Sepnoty Logo" className="h-12 w-auto" />
                 SEPNOTY 
@@ -18,12 +18,21 @@ const Footer = () => {
               </p>
             </div>
             <div className="mt-4 space-y-2">
+            <h3 className="text-lg font-semibold ">Contact Us</h3>
               <p className="text-sm text-gray-400">📍 Address: Kotappakonda Road, Narasaraopeta - 522601</p>
               <p className="text-sm text-gray-400">Palnadu Dist, Andhra Pradesh 522601</p>
               <Link href="mailto:support@sepnoty.com" className="text-blue-400 hover:text-blue-300 text-sm">
                 ✉️ support@sepnoty.com
               </Link>
               <p className="text-sm text-gray-400">📞 +91 9347199424</p>
+            </div>
+            <div className="mt-4 space-y-2">
+            <h3 className="text-lg font-semibold ">Follow Us </h3>
+            <div className="flex space-x-2">
+              <img src="/icon.svg" alt="Visa" className="h-6" />
+              <img src="/icon.svg" alt="MasterCard" className="h-6" />
+              <img src="/icon.svg" alt="Google Pay" className="h-6" />
+            </div>
             </div>
           </div>
 
@@ -53,7 +62,7 @@ const Footer = () => {
             {/* Newsletter */}
             <div className="md:w-1/2">
               <h3 className="text-lg font-semibold mb-4">Newsletter</h3>
-              <p className="text-sm text-gray-400 mb-2">Get Every Single Update to Join Our Newsletter</p>
+              <p className="text-sm text-gray-400 mb-2 text-bold">Get Every Single Update to Join Our Newsletter</p>
               <div className="flex items-center bg-gray-800 rounded-lg p-2">
                 <input
                   type="email"
@@ -62,6 +71,18 @@ const Footer = () => {
                 />
                 <button className="text-blue-400 hover:text-blue-300 text-sm">Sign Up »</button>
               </div>
+
+
+               {/* Secure Payment Options */}
+          <div className="mt-4 md:mt-8">
+            <h3 className="text-lg font-semibold text-left mb-2 whitespace-nowrap mt-10">Secure Payment Options</h3>
+            <div className="flex space-x-2">
+              <img src="/visa.svg" alt="Visa" className="h-6" />
+              <img src="/visa.svg" alt="MasterCard" className="h-6" />
+              <img src="/visa.svg" alt="Google Pay" className="h-6" />
+              <img src="/visa.svg" alt="PayPal" className="h-6" />
+            </div>
+          </div>
             </div>
 
             {/* Flagship App */}
@@ -86,20 +107,11 @@ const Footer = () => {
             ))}
           </div>
 
-          {/* Secure Payment Options */}
-          <div className="mt-4 md:mt-0">
-            <h3 className="text-sm font-semibold text-gray-400 mb-2">Secure Payment Options</h3>
-            <div className="flex space-x-2">
-              <img src="/visa.png" alt="Visa" className="h-6" />
-              <img src="/mastercard.png" alt="MasterCard" className="h-6" />
-              <img src="/gpay.png" alt="Google Pay" className="h-6" />
-              <img src="/paypal.png" alt="PayPal" className="h-6" />
-            </div>
-          </div>
+         
 
           {/* Copyright */}
           <div className="mt-4 md:mt-0">
-            <p className="text-gray-400 text-sm">
+            <p className="text-gray-400 text-sm text-center">
               © 2024 Sepnoty Technologies Pvt Ltd. All rights reserved.
             </p>
           </div>
