@@ -164,7 +164,7 @@ export default function Home() {
       <img src="/Cloud1.png" alt="" />
 
       {/* Bulb Image */}
-      <div className="absolute top-[-100px] left-[-100px] w-40 md:w-40">
+      <div className="absolute top-[-100px] left-[-100px] max-lg:top-[-50px] max-lg:left-[-50px] w-40 md:w-40 p-10px"      >
         <img src="/Bulb.png" alt="Bulb Icon" />
       </div>
     </div>
@@ -173,24 +173,27 @@ export default function Home() {
 
 {/* Connection Experience Section */}
 
+{/* Connection Experience Section */}
 <div className="bg-[#000A1F] text-white p-8 rounded-xl">
   {/* Main Section */}
   <div className="relative w-full">
     
     {/* Background Text */}
-    <div className="
-      absolute 
-      text-[8rem] max-lg:text-[4rem]      /* Responsive text size */
-      [-webkit-text-stroke:1px_rgba(255,255,255,0.3)] 
-      font-bold 
-      text-transparent 
-      top-[-100px]                      /* Adjusted unit for clarity */
-      left-20 max-lg:left-10            /* Responsive left spacing */
-      w-full 
-      text-left 
-      select-none 
-      z-10                            /* CHANGED: Added z-10 to place this element behind the pseudo image */
-    ">
+    <div
+      className="
+        absolute 
+        text-[8rem] max-lg:text-[4rem]      /* Responsive text size */
+        [-webkit-text-stroke:1px_rgba(255,255,255,0.3)] 
+        font-bold 
+        text-transparent 
+        top-[-100px]                      /* CHANGED: Added 'px' unit */
+        left-20 max-lg:left-10            /* Responsive left spacing */
+        w-full 
+        text-left 
+        select-none 
+        z-10                            /* CHANGED: Explicitly set z-index to ensure proper stacking */
+      "
+    >
       BRAND
     </div>
 
@@ -203,8 +206,10 @@ export default function Home() {
         className="
           h-3 w-13 
           absolute 
-          left-20 top-[-20px]              
-          max-lg:left-10 max-lg:top-[-10px] 
+          left-20 
+          top-[-20px]              /* CHANGED: Added 'px' unit for consistency */
+          max-lg:left-10 
+          max-lg:top-[-10px]         /* CHANGED: Added 'px' unit for consistency */
           z-20
         "
       />
@@ -228,7 +233,7 @@ export default function Home() {
 
   <div className="w-full overflow-hidden mt-10 relative">
     {/* marquee  */}
-    <div className="transform w-[120vw] ">
+    <div className="transform w-[120vw]">
       <Marquee
         direction="right"
         className="py-6 bg-[#0b0d1c] shadow-[0px_4px_31.700000762939453px_0px_rgba(0,0,0,0.25)]"
@@ -240,7 +245,6 @@ export default function Home() {
         ))}
       </Marquee>
     </div>
-
   </div>
 </div>
 
@@ -436,7 +440,7 @@ export default function Home() {
                 text-[4rem] md:text-[8rem]   {/* CHANGED: On mobile, font size is 4rem; on desktop, remains 8rem */}
                 [-webkit-text-stroke:1px_rgba(255,255,255,0.3)] 
                 font-bold text-transparent 
-                top-[-30] md:top-[-100]      {/* CHANGED: On mobile, top is -30; on desktop, remains -100 */}
+                top-[-50px] md:top-[-100px]      {/* CHANGED: On mobile, top is -30; on desktop, remains -100 */}
                 text-center w-full text-left 
                 select-none whitespace-nowrap">  {/* CHANGED: Added whitespace-nowrap to keep text on one line */}
       SERVICE
@@ -444,7 +448,7 @@ export default function Home() {
     <div className="flex justify-center">
       {/* Left Side - Pseudo Image */}
       <img className="h-3 w-13 absolute 
-                  top-[-20] md:top-[-10]  {/* CHANGED: On mobile, pseudo image is raised to top -50; on desktop, remains at -10 */}
+                  top-[-20px] md:top-[-10px]  {/* CHANGED: On mobile, pseudo image is raised to top -50; on desktop, remains at -10 */}
                   z-10"                
            src="/Pseudo.png " alt="" />
     </div>
@@ -890,12 +894,20 @@ export default function Home() {
         {/* contact section  */}
 
         <section className="relative bg-[#0b0d1c] text-white py-20 px-6 md:px-16 flex flex-col md:flex-row items-center justify-between">
-  <h1 className="absolute text-[6rem] font-bold text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.3)] top-[-20] md:left-40 select-none">
+  {/* Background Text */}
+  <h1
+    className="absolute text-[6rem] font-bold text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.3)] top-[-20px] md:left-40 select-none"
+  >
     CALL
   </h1>
-  <div className="flex justify-center"> {/* Added gap-x-8 */}
-    {/* Left Side - Pseudo Image */}
-    <img className="h-3 w-13 absolute top-[40] left-[170] md:left-[220px] lg:left-[350px]" src="/Pseudo.png" alt="" />
+
+  <div className="flex justify-center">
+    {/* Pseudo Image */}
+    <img
+      className="h-3 w-13 absolute top-[40px] left-[170px] md:left-[220px] lg:left-[350px]"
+      src="/Pseudo.png"
+      alt=""
+    />
   </div>
 
   {/* Left Side: Illustration */}
@@ -911,7 +923,9 @@ export default function Home() {
 
   {/* Right Side: Form */}
   <div className="w-full md:w-1/2 mt-10 md:mt-0">
-    <h2 className="text-2xl md:text-3xl font-semibold mb-6">Ready to Work Together <br /> In News Projects ?</h2>
+    <h2 className="text-2xl md:text-3xl font-semibold mb-6">
+      Ready to Work Together <br /> In News Projects ?
+    </h2>
 
     <form className="space-y-4">
       <div className="flex space-x-4">
@@ -943,12 +957,14 @@ export default function Home() {
 
       <button
         type="submit"
-        className="w-full p-3 bg-purple-600 rounded-md text-white font-semibold hover:bg-purple-700 transition">
+        className="w-full p-3 bg-purple-600 rounded-md text-white font-semibold hover:bg-purple-700 transition"
+      >
         Send it to the moon 🚀
       </button>
     </form>
   </div>
 </section>
+
 
 
 
