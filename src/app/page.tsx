@@ -828,7 +828,7 @@ export default function Home() {
     >
       {testimonials.map((testimonial, i) => (
         <SwiperSlide key={i}>
-          <div className="bg-[#1A1A1A] p-6 rounded-lg transition-all duration-300 p-12">
+          <div className="bg-[#1A1A1A]  rounded-lg transition-all duration-300 p-12">
             <blockquote className="text-lg italic relative">
               <img src="/Quotes.png" alt="" className="p-3" />
               <span className="text-purple-400 text-3xl">&ldquo;</span>
