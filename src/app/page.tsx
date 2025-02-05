@@ -12,7 +12,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
- 
+//  hiiii 
 
 
 export default function Home() {
@@ -408,7 +408,7 @@ export default function Home() {
                 font-bold text-transparent 
                 top-[-50px] md:top-[-100px]      {/* CHANGED: On mobile, top is -30; on desktop, remains -100 */}
                 text-center w-full text-left 
-                select-none whitespace-nowrap">  
+                select-none whitespace-nowrap">  {/* CHANGED: Added whitespace-nowrap to keep text on one line */}
       SERVICE
     </div>
     <div className="flex justify-center">
