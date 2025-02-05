@@ -697,7 +697,7 @@ export default function Home() {
 
                       <div className={`overflow-hidden transition-all duration-300 ${openIndex === index ? 'mt-6 opacity-100' : 'mt-0 h-0 opacity-0'
                         }`}>
-                        <div className="text-gray-600 text-lg leading-relaxed">
+                        <div className="text-white text-lg leading-relaxed">
                           {item.answer}
                           {index === 1 && (
                             <button className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-[2rem] text-lg font-medium flex items-center gap-3 transition-colors mt-6">
@@ -862,7 +862,7 @@ export default function Home() {
     >
       {testimonials.map((testimonial, i) => (
         <SwiperSlide key={i}>
-          <div className="bg-[#1A1A1A] p-6 rounded-lg transition-all duration-300">
+          <div className="bg-[#1A1A1A] p-6 rounded-lg transition-all duration-300 p-10">
             <blockquote className="text-lg italic relative">
               <img src="/span.icon.svg" alt="" className="p-3" />
               <span className="text-purple-400 text-3xl">&ldquo;</span>

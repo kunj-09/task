@@ -27,9 +27,9 @@ const Footer = () => {
             <div className="space-y-2">
               <h3 className="text-lg font-semibold">Follow Us</h3>
               <div className="flex space-x-3">
-                <img src="/icon.svg" alt="Social Icon 1" className="h-6 w-6" />
+                <img src="/Twitter.svg" alt="Social Icon 1" className="h-6 w-6" />
                 <img src="/icon.svg" alt="Social Icon 2" className="h-6 w-6" />
-                <img src="/icon.svg" alt="Social Icon 3" className="h-6 w-6" />
+                <img src="/Instagram.svg" alt="Social Icon 3" className="h-6 w-6" />
               </div>
             </div>
           </div>
@@ -77,15 +77,16 @@ const Footer = () => {
                   placeholder="Email Address"
                   className="bg-transparent text-sm px-2 w-full focus:outline-none"
                 />
-                <button className="text-blue-400 hover:text-blue-300 text-sm">Sign Up »</button>
+                <button className="text-blue-400 hover:text-blue-300 text-sm">SignUp</button>
               </div>
               <div className="space-y-2">
                 <h3 className="text-lg font-semibold">Secure Payment Options</h3>
                 <div className="flex space-x-2">
-                  <img src="/visa.svg" alt="Visa" className="h-6" />
-                  <img src="/mastercard.svg" alt="MasterCard" className="h-6" />
-                  <img src="/gpay.svg" alt="Google Pay" className="h-6" />
-                  <img src="/paypal.svg" alt="PayPal" className="h-6" />
+                <img src="/masterCard.svg" alt="Visa" className="h-6" />
+                  <img src="/mastercard-SC.svg" alt="Visa" className="h-6" />
+                  <img src="/googlePay.svg" alt="MasterCard" className="h-6" />
+                  <img src="/paypal.svg" alt="Google Pay" className="h-6" />
+                  <img src="/paypass.svg" alt="PayPal" className="h-6" />
                 </div>
               </div>
             </div>
