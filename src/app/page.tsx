@@ -269,7 +269,7 @@ export default function Home() {
               <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="flex items-center space-x-4">
                   <img
-                    src="/Empathy.svg" // REPLACE WITH ACTUAL IMAGE
+                    src="/Empathy.png" // REPLACE WITH ACTUAL IMAGE
                     alt="Empathetic AI Icon"
                     width={40}
                     height={40}
