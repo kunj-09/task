@@ -830,7 +830,7 @@ export default function Home() {
         <SwiperSlide key={i}>
           <div className="bg-[#1A1A1A] p-6 rounded-lg transition-all duration-300 p-10">
             <blockquote className="text-lg italic relative">
-              <img src="/span.icon.svg" alt="" className="p-3" />
+              <img src="/Quotes.png" alt="" className="p-3" />
               <span className="text-purple-400 text-3xl">&ldquo;</span>
               {testimonial.quote}
             </blockquote>
