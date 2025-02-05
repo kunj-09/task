@@ -12,34 +12,12 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-// hiiii  
+ 
 
 
 export default function Home() {
   // section icons 
   const icons = [FaReact, FaNodeJs, FaPython, FaJava, FaHtml5, FaCss3, FaJs, FaBootstrap];
-
-  // const icons = [
-  //   "/React.svg",
-  //   "React.svg",
-  //   "React.svg",
-  //   "React.svg",
-  //   "DarkGithub.svg",
-  //   "React.svg",
-  //   "React.svg",
-  // ];
-  // const [position, setPosition] = useState(0);
-  // const totalIcons = icons.length;
-
-  // const handleNext = () => {
-  //   setPosition((prev) => (prev + 1) % totalIcons); // Loop to the start after the last icon
-  // };
-
-  // const handlePrev = () => {
-  //   setPosition((prev) => (prev - 1 + totalIcons) % totalIcons); // Loop to the end after the first icon
-  // };
-
-
 
   const testimonials = [
     {
@@ -88,15 +66,7 @@ export default function Home() {
       )
     }
   ];
-  // const [index, setIndex] = useState(0);
-
-  // const nextTestimonial = () => {
-  //   setIndex((prev) => (prev + 1) % testimonials.length);
-  // };
-  // const prevTestimonial = () => {
-  //   setIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  // };
-
+ 
   return (
     <>
       <Navbar />
@@ -269,12 +239,10 @@ export default function Home() {
 
             {/* Right Side Content */}
     <div className="lg:w-1/2 text-center lg:text-left mt-10 lg:mt-0 relative w-full">
-      {/* Pseudo Image (placed above the background text) */}
       <img
         src="/Pseudo.png"
         alt=""
         className="h-3 w-13 absolute left-20 top-[-20px] z-20" 
-        // CHANGED: Added "z-20" to ensure this image appears above the background text
       />
               {/* Background Text */}
               <h1
@@ -363,7 +331,6 @@ export default function Home() {
   <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between ">
     {/* Left Content */}
 
-    {/* --- CHANGED: Updated mobile positioning and ensured one-line text --- */}
     <div
       className="absolute 
                  text-[3rem] sm:text-[4rem] md:text-[6rem]   /* Responsive sizes */
@@ -376,7 +343,6 @@ export default function Home() {
       WHO WE ARE?
     </div>
 
-    {/* --- CHANGED: Added z-10 to ensure this image appears above the background text --- */}
     <img
        className="h-3 w-13 absolute top-5 md:top-40 z-10" 
       src="/Pseudo.png"
@@ -401,7 +367,7 @@ export default function Home() {
               className="flex items-center gap-2 bg-gray-900 text-white py-2 px-4 rounded-lg shadow-md"
             >
               <img
-                src="/Check.svg" // REPLACE WITH ACTUAL IMAGE
+                src="/Check.svg" 
                 alt="Check"
                 width={20}
                 height={20}
@@ -416,7 +382,7 @@ export default function Home() {
     {/* Right Image */}
     <div className="md:w-1/2 flex justify-center mt-10 md:mt-0">
       <img
-        src="/About.png" // REPLACE WITH ACTUAL IMAGE
+        src="/About.png" 
         alt="Who We Are Illustration"
         width={450}
         height={450}
@@ -442,7 +408,7 @@ export default function Home() {
                 font-bold text-transparent 
                 top-[-50px] md:top-[-100px]      {/* CHANGED: On mobile, top is -30; on desktop, remains -100 */}
                 text-center w-full text-left 
-                select-none whitespace-nowrap">  {/* CHANGED: Added whitespace-nowrap to keep text on one line */}
+                select-none whitespace-nowrap">  
       SERVICE
     </div>
     <div className="flex justify-center">
